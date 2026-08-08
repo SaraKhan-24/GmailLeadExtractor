@@ -46,18 +46,21 @@ cp .env.example .env
 1. Obtain credentials.json from the Google Cloud Console (OAuth 2.0 Client IDs).
 2. Place credentials.json in the root directory of the project.
 
-##🧪Verification & Usage
+---
 
-###Test Authentication (Module 1):
+## 🧪Verification & Usage
+
+### Test Authentication (Module 1):
 ```bash
 python test_auth.py
 ```
-###Test Email Fetching & Parsing (Module 2):
+### Test Email Fetching & Parsing (Module 2):
 ```bash
 python test_fetch.py
 ```
-##📁 Project Structure
-```bash
+---
+## 📁 Project Structure
+```text
 GmailLeadExtractor/
 ├── src/
 │   ├── auth.py         # Google OAuth2 service builder
