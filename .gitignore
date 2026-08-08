@@ -1,0 +1,17 @@
+#Google OAuth
+credentials.json
+token.json
+.env
+
+#Pythone Cache and Build Files
+__pycache__/
+*.pyc
+.pytest_cache/
+
+#Virtual Environments
+.venv/
+venv/
+
+#Editor/System files
+.vscode/
+.DS_Store
