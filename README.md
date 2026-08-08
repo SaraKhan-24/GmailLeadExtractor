@@ -25,16 +25,21 @@ An automated Python tool designed to authenticate with the Gmail API, search and
 ```bash
 git clone https://github.com/SaraKhan-24/GmailLeadExtractor.git
 cd GmailLeadExtractor
+```
 
 ### 2. Setup Virtual Environment
 
+```bash
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+```
 
 ### 3. Configure Environment Variables
 
+```bash
 cp .env.example .env
+```
 
 ### 4. Add Google Cloud Credentials
 
@@ -44,15 +49,15 @@ cp .env.example .env
 ##🧪Verification & Usage
 
 ###Test Authentication (Module 1):
-
+```bash
 python test_auth.py
-
+```
 ###Test Email Fetching & Parsing (Module 2):
-
+```bash
 python test_fetch.py
-
+```
 ##📁 Project Structure
-
+```bash
 GmailLeadExtractor/
 ├── src/
 │   ├── auth.py         # Google OAuth2 service builder
@@ -62,4 +67,4 @@ GmailLeadExtractor/
 ├── requirements.txt    # Project dependencies
 ├── test_auth.py        # Authentication test script
 └── test_fetch.py       # Email fetching test script
-
+```
