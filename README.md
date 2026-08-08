@@ -63,29 +63,3 @@ GmailLeadExtractor/
 ├── test_auth.py        # Authentication test script
 └── test_fetch.py       # Email fetching test script
 
-
----
-
-### Step 4: Run Git Commands to Push to GitHub
-
-Run these commands in your terminal to perform a clean push:
-
-```bash
-# 1. Initialize git (if not already initialized)
-git init
-
-# 2. Link your remote GitHub repository
-git remote add origin https://github.com/SaraKhan-24/GmailLeadExtractor.git
-
-# 3. Check status - IMPORTANT: Make sure credentials.json, token.json, and .venv are NOT listed!
-git status
-
-# 4. Stage files
-git add .
-
-# 5. Commit changes
-git commit -m "feat: complete Module 1 (Auth) and Module 2 (Gmail Fetching & Parsing)"
-
-# 6. Set main branch and push to GitHub
-git branch -M main
-git push -u origin main
