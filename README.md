@@ -1,10 +1,10 @@
-# 📬 Gmail Lead Extractor
+# Gmail Lead Extractor
 
 An automated Python tool designed to authenticate with the Gmail API, search and fetch email threads, parse raw MIME and HTML bodies, extract leads, and sync results with Google Sheets.
 
 ---
 
-## 🚀 Project Roadmap & Status
+## Project Roadmap & Status
 
 - [x] **Module 1: Authentication & Configuration**
   - OAuth2 workflow setup using `google-auth-oauthlib`.
@@ -12,14 +12,15 @@ An automated Python tool designed to authenticate with the Gmail API, search and
 - [x] **Module 2: Email Fetching & Parsing**
   - Gmail API query search (`list_message_ids`).
   - MIME body parser handling `text/plain` and HTML fallback parsing with tag stripping.
-- [ ] **Module 3: Lead Classification & Extraction** *(In Progress)*
-  - Extract structured lead data (sender, phone numbers, query intent, call-to-actions).
-- [ ] **Module 4: Google Sheets Export & Automated Sync** *(Upcoming)*
+- [x] **Module 3: Lead Classification & Extraction** 
+  - Structured AI classification using Google GenAI SDK (`google-genai`)
+  -Pydantic schema validation (`LeadData`) for extracting lead intent, name, email, budget, priority, and summary
+- [ ] **Module 4: Google Sheets Export & Automated Sync** *(In Progress)*
   - Automated lead export to Google Sheets via `gspread`.
 
 ---
 
-## 🛠️ Installation & Setup
+## Installation & Setup
 
 ### 1. Clone the Repository
 ```bash
@@ -48,7 +49,7 @@ cp .env.example .env
 
 ---
 
-## 🧪Verification & Usage
+## Verification & Usage
 
 ### Test Authentication (Module 1):
 ```bash
@@ -58,8 +59,12 @@ python test_auth.py
 ```bash
 python test_fetch.py
 ```
+### Test AI Lead Classification (Module 3):
+```bash
+python test_classify.py
+```
 ---
-## 📁 Project Structure
+## Project Structure
 ```text
 GmailLeadExtractor/
 ├── src/

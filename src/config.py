@@ -23,6 +23,11 @@ class Config:
     # so we split them into the list format Google's SDK expects.
     GMAIL_SCOPES: list[str] = os.getenv("GMAIL_SCOPES", "").split(",")
 
+    GEMINI_API_KEY:str=os.getenv("GEMINI_API_KEY","")
+    GEMINI_MODEL_NAME:str=os.getenv("GEMINI_MODEL_NAME","gemini-flash-latest")
+
+
+
     @classmethod
     def validate(cls) -> None:
         """
@@ -37,3 +42,6 @@ class Config:
                 f"credentials.json not found at '{cls.GOOGLE_CREDENTIALS_PATH}'. "
                 "Download it from Google Cloud Console → Auth Platform → Clients."
             )
+        if not cls.GEMINI_API_KEY:
+            raise ValueError("GEMINI_API_KEY is not set in .env")
+            
