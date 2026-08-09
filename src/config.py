@@ -26,7 +26,9 @@ class Config:
     GEMINI_API_KEY:str=os.getenv("GEMINI_API_KEY","")
     GEMINI_MODEL_NAME:str=os.getenv("GEMINI_MODEL_NAME","gemini-flash-latest")
 
-
+    GOOGLE_SHEET_NAME:str=os.getenv("GOOGLE_SHEET_NAME","AI Lead Extractor - Leads")
+    GMAIL_PROCESSED_LABEL: str=os.getenv("GMAIL_PROCESSED_Label","Lead-Processed")
+    
 
     @classmethod
     def validate(cls) -> None:
@@ -44,4 +46,3 @@ class Config:
             )
         if not cls.GEMINI_API_KEY:
             raise ValueError("GEMINI_API_KEY is not set in .env")
-            

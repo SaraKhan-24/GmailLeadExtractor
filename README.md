@@ -15,7 +15,7 @@ An automated Python tool designed to authenticate with the Gmail API, search and
 - [x] **Module 3: Lead Classification & Extraction** 
   - Structured AI classification using Google GenAI SDK (`google-genai`)
   -Pydantic schema validation (`LeadData`) for extracting lead intent, name, email, budget, priority, and summary
-- [ ] **Module 4: Google Sheets Export & Automated Sync** *(In Progress)*
+- [x] **Module 4: Google Sheets Export & Automated Sync**
   - Automated lead export to Google Sheets via `gspread`.
 
 ---
@@ -63,16 +63,26 @@ python test_fetch.py
 ```bash
 python test_classify.py
 ```
+### Test Full Pipeline & Google Sheets Export (Module 4):
+```bash
+python test_export.py
+```
 ---
 ## Project Structure
 ```text
 GmailLeadExtractor/
 ├── src/
-│   ├── auth.py         # Google OAuth2 service builder
-│   ├── config.py       # Centralized env config loader
-│   └── gmail_reader.py # Gmail API fetcher & MIME/HTML parser
-├── .env.example        # Environment variables template
-├── requirements.txt    # Project dependencies
-├── test_auth.py        # Authentication test script
-└── test_fetch.py       # Email fetching test script
+│   ├── ai_classifier.py  # Structured AI lead classification via Google GenAI SDK
+│   ├── auth.py           # Google OAuth2 service builder
+│   ├── config.py         # Centralized env config loader
+│   ├── gmail_labeler.py  # Gmail email labeling & status tracking
+│   ├── gmail_reader.py   # Gmail API fetcher & MIME/HTML parser
+│   └── sheets_exporter.py# Google Sheets creation & batch lead exporter
+├── .env.example          # Environment variables template
+├── requirements.txt      # Project dependencies
+├── test_auth.py          # Authentication test script
+├── test_classify.py      # AI lead classification test script
+├── test_export.py        # End-to-end pipeline & Google Sheets export test script
+└── test_fetch.py         # Email fetching test 
+script
 ```
