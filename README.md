@@ -16,7 +16,8 @@ An automated Python tool designed to authenticate with the Gmail API, search and
   - Structured AI classification using Google GenAI SDK (`google-genai`)
   -Pydantic schema validation (`LeadData`) for extracting lead intent, name, email, budget, priority, and summary
 - [x] **Module 4: Google Sheets Export & Automated Sync**
-  - Automated lead export to Google Sheets via `gspread`.
+  - Automated lead export to Google Sheets via `gspread` with automatic spreadsheet creation.
+  -Gmail email labeling (`gmail_labeler`) to tag processed emails and defensive deduplication(`sheets_exporter.py`).
 
 ---
 

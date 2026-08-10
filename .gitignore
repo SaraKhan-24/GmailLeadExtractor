@@ -15,3 +15,5 @@ venv/
 #Editor/System files
 .vscode/
 .DS_Store
+
+pipeline.log
